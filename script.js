@@ -1,131 +1,132 @@
-/*
-=========================================
-FACEBOOK
-=========================================
+/* =========================================
+   CẤU HÌNH FACEBOOK
+   =========================================
 
-DÁN LINK FACEBOOK CỦA BẠN VÀO ĐÂY.
+   Khi có link Facebook, điền vào giữa 2 dấu "":
+   
+   Ví dụ:
+   const FACEBOOK_URL = "https://www.facebook.com/ducmanh";
 
-Ví dụ:
+   Nếu để trống:
+   const FACEBOOK_URL = "";
 
-const FACEBOOK_URL =
-  "https://web.facebook.com/llllllllllvllllllllll/";
-
+   => Nút Facebook sẽ tự động ẩn.
 */
 
 const FACEBOOK_URL = "https://web.facebook.com/llllllllllvllllllllll/";
 
 
-/* ======================================
-   FACEBOOK BUTTON
-====================================== */
+/* =========================================
+   FACEBOOK
+   ========================================= */
 
-const facebookLink =
-  document.getElementById("facebookLink");
+const facebookLink = document.getElementById("facebookLink");
 
+if (facebookLink) {
 
-if (FACEBOOK_URL.trim()) {
+  if (FACEBOOK_URL.trim() !== "") {
 
-  facebookLink.href =
-    FACEBOOK_URL;
+    // Có link Facebook => hiện nút
+    facebookLink.href = FACEBOOK_URL;
+    facebookLink.style.display = "flex";
 
-} else {
+  } else {
 
-  facebookLink.addEventListener(
-    "click",
-    function (event) {
+    // Chưa có link => ẩn nút Facebook
+    facebookLink.style.display = "none";
 
-      event.preventDefault();
-
-      alert(
-        "Bạn chưa điền link Facebook."
-      );
-
-    }
-  );
+  }
 
 }
 
 
-/* ======================================
-   QR NGÂN HÀNG
-====================================== */
+/* =========================================
+   QR THANH TOÁN NGÂN HÀNG
+   ========================================= */
 
-const modal =
-  document.getElementById(
-    "bankModal"
-  );
-
-const bankBtn =
-  document.getElementById(
-    "bankBtn"
-  );
-
-const closeBtn =
-  document.getElementById(
-    "closeBtn"
-  );
-
-const closeModal =
-  document.getElementById(
-    "closeModal"
-  );
+const bankModal = document.getElementById("bankModal");
+const bankBtn = document.getElementById("bankBtn");
+const closeBtn = document.getElementById("closeBtn");
+const closeModal = document.getElementById("closeModal");
 
 
-/* Mở QR */
+/* Mở QR ngân hàng */
 
-function openModal() {
+function openBankQR() {
 
-  modal.classList.add("show");
+  if (!bankModal) return;
 
-  modal.setAttribute(
+  bankModal.classList.add("show");
+
+  bankModal.setAttribute(
     "aria-hidden",
     "false"
   );
 
+  // Không cho cuộn trang phía sau popup
+  document.body.style.overflow = "hidden";
+
 }
 
 
-/* Đóng QR */
+/* Đóng QR ngân hàng */
 
-function hideModal() {
+function hideBankQR() {
 
-  modal.classList.remove(
-    "show"
-  );
+  if (!bankModal) return;
 
-  modal.setAttribute(
+  bankModal.classList.remove("show");
+
+  bankModal.setAttribute(
     "aria-hidden",
     "true"
   );
 
+  // Cho phép cuộn trang trở lại
+  document.body.style.overflow = "";
+
 }
 
 
-/* Click Thanh toán */
+/* Nút Thanh toán */
 
-bankBtn.addEventListener(
-  "click",
-  openModal
-);
+if (bankBtn) {
 
+  bankBtn.addEventListener(
+    "click",
+    openBankQR
+  );
 
-/* Click X */
-
-closeBtn.addEventListener(
-  "click",
-  hideModal
-);
+}
 
 
-/* Click ra ngoài */
+/* Nút X */
 
-closeModal.addEventListener(
-  "click",
-  hideModal
-);
+if (closeBtn) {
+
+  closeBtn.addEventListener(
+    "click",
+    hideBankQR
+  );
+
+}
 
 
-/* Nhấn ESC */
+/* Bấm ra ngoài popup */
+
+if (closeModal) {
+
+  closeModal.addEventListener(
+    "click",
+    hideBankQR
+  );
+
+}
+
+
+/* =========================================
+   PHÍM ESC ĐỂ ĐÓNG POPUP
+   ========================================= */
 
 document.addEventListener(
   "keydown",
@@ -133,7 +134,7 @@ document.addEventListener(
 
     if (event.key === "Escape") {
 
-      hideModal();
+      hideBankQR();
 
     }
 
