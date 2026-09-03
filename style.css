@@ -51,16 +51,19 @@ a {
    ========================================================= */
 
 .hero {
-    background-image:
-        linear-gradient(
-            rgba(0, 100, 220, 0.45),
-            rgba(0, 130, 240, 0.45)
-        ),
-        url("assets/hero-bg.jpg");
+    position: relative;
+    height: 265px;
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: linear-gradient(
+        135deg,
+        #0759d9 0%,
+        #0878ed 55%,
+        #1598f5 100%
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 
