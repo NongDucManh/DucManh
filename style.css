@@ -1,4 +1,10 @@
 /* =========================================================
+   ĐỨC MẠNH - PERSONAL SERVICE PAGE
+   COMPLETE STYLE
+   ========================================================= */
+
+
+/* =========================================================
    RESET
    ========================================================= */
 
@@ -10,24 +16,37 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
+}
+
+body {
     background: #f3f6fb;
     color: #172033;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Helvetica, Arial, sans-serif;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
     line-height: 1.6;
+
     overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
 }
 
 button,
 a {
     font: inherit;
-}
-
-a {
-    text-decoration: none;
 }
 
 
@@ -38,11 +57,17 @@ a {
 .card {
     width: 100%;
     max-width: 720px;
-    margin: 0 auto;
+
     min-height: 100vh;
+
+    margin: 0 auto;
+
     background: #ffffff;
+
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(20, 40, 80, 0.08);
+
+    box-shadow:
+        0 10px 40px rgba(20, 40, 80, 0.08);
 }
 
 
@@ -51,17 +76,22 @@ a {
    ========================================================= */
 
 .hero {
-    position: relative;
-    height: 285px;
-    background: linear-gradient(
-        135deg,
-        #0759d9 0%,
-        #0878ed 55%,
-        #1598f5 100%
-    );
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    position: relative !important;
+
+    width: 100% !important;
+    height: 285px !important;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0759d9 0%,
+            #0878ed 55%,
+            #1598f5 100%
+        );
+
+    display: block !important;
+
+    overflow: visible !important;
 }
 
 
@@ -69,37 +99,61 @@ a {
    AVATAR
    ========================================================= */
 
-.avatar-wrap {
-    position: absolute;
-    left: 50%;
-    bottom: -82px;
-    transform: translateX(-50%);
+.hero .avatar-wrap {
+    position: absolute !important;
 
-    width: 166px;
-    height: 166px;
+    left: 50% !important;
+    top: auto !important;
+    bottom: -82px !important;
 
-    padding: 6px;
-    background: #ffffff;
+    transform: translateX(-50%) !important;
 
-    border-radius: 50%;
+    width: 166px !important;
+    height: 166px !important;
+
+    min-width: 166px !important;
+    min-height: 166px !important;
+
+    max-width: 166px !important;
+    max-height: 166px !important;
+
+    padding: 6px !important;
+
+    background: #ffffff !important;
+
+    border-radius: 50% !important;
+
     box-shadow:
-        0 12px 30px rgba(0, 45, 110, 0.22);
+        0 12px 30px rgba(0, 45, 110, 0.22) !important;
 
-    z-index: 5;
+    z-index: 20 !important;
+
+    overflow: hidden !important;
 }
 
-.avatar {
-    display: block;
 
-    width: 100%;
-    height: 100%;
+.hero .avatar-wrap .avatar {
+    display: block !important;
 
-    border-radius: 50%;
+    width: 154px !important;
+    height: 154px !important;
 
-    object-fit: cover;
+    min-width: 154px !important;
+    min-height: 154px !important;
 
-    /* Giữ khuôn mặt không bị cắt */
-    object-position: center 32%;
+    max-width: 154px !important;
+    max-height: 154px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+
+    object-position: center 32% !important;
 }
 
 
@@ -108,8 +162,13 @@ a {
    ========================================================= */
 
 .profile {
+    position: relative;
+
     padding: 105px 24px 25px;
+
     text-align: center;
+
+    background: #ffffff;
 }
 
 .profile h1 {
@@ -119,16 +178,18 @@ a {
 
     font-size: 34px;
     font-weight: 800;
+
     letter-spacing: -0.5px;
 }
 
 
 /* =========================================================
-   PRIMARY CTA
+   PRIMARY BUTTON
    ========================================================= */
 
 .primary-btn {
     display: inline-flex;
+
     align-items: center;
     justify-content: center;
 
@@ -141,13 +202,14 @@ a {
 
     border-radius: 999px;
 
-    background: linear-gradient(
-        135deg,
-        #0866df,
-        #087eea
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #0866df,
+            #087eea
+        );
 
-    color: #ffffff;
+    color: #ffffff !important;
 
     font-size: 16px;
     font-weight: 700;
@@ -161,7 +223,8 @@ a {
 }
 
 .primary-btn:hover {
-    color: #ffffff;
+    color: #ffffff !important;
+
     transform: translateY(-2px);
 
     box-shadow:
@@ -185,11 +248,15 @@ a {
     color: #4c5b70;
 
     font-size: 17px;
+
     line-height: 1.65;
+
+    text-align: center;
 }
 
 .intro strong {
     color: #075fd8;
+
     font-weight: 750;
 }
 
@@ -200,10 +267,14 @@ a {
 
 .networks {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
     gap: 12px;
 
     max-width: 620px;
+
     margin: 0 auto;
 }
 
@@ -211,6 +282,7 @@ a {
     min-height: 58px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -219,6 +291,7 @@ a {
     border-radius: 14px;
 
     font-size: 15px;
+
     font-weight: 800;
 
     border: 1px solid transparent;
@@ -234,25 +307,31 @@ a {
 
 .network.viettel {
     background: #eaf7ed;
+
     color: #16843c;
+
     border-color: #ccebd4;
 }
 
 .network.vinaphone {
     background: #edf3ff;
+
     color: #245dcc;
+
     border-color: #d5e2ff;
 }
 
 .network.mobifone {
     background: #f2ecff;
+
     color: #7040c8;
+
     border-color: #e1d4ff;
 }
 
 
 /* =========================================================
-   SECTIONS
+   SECTION
    ========================================================= */
 
 .section {
@@ -265,6 +344,7 @@ a {
     color: #102f60;
 
     font-size: 22px;
+
     font-weight: 800;
 
     text-align: center;
@@ -285,6 +365,7 @@ a {
     background: #ffffff;
 
     border: 1px solid #e5ebf4;
+
     border-radius: 18px;
 
     box-shadow:
@@ -299,9 +380,11 @@ a {
     color: #34445a;
 
     font-size: 15.5px;
+
     line-height: 1.5;
 
-    border-bottom: 1px solid #edf1f6;
+    border-bottom:
+        1px solid #edf1f6;
 }
 
 .service-box p:last-child {
@@ -316,11 +399,14 @@ a {
 .actions {
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
     gap: 12px;
 
     padding: 20px 24px 28px;
+
+    align-items: stretch;
 }
 
 
@@ -329,40 +415,47 @@ a {
    ========================================================= */
 
 .action {
-    min-height: 62px;
+    position: relative;
+
+    min-height: 66px;
 
     display: flex;
+
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
 
-    padding: 12px 14px;
+    gap: 13px;
 
-    border: 1px solid #e3e9f2;
-    border-radius: 15px;
+    padding: 12px 15px;
+
+    border:
+        1px solid #e3e9f2;
+
+    border-radius: 16px;
 
     background: #ffffff;
 
-    color: #18345f;
+    color: #18345f !important;
 
     font-size: 15px;
+
     font-weight: 700;
 
-    text-align: center;
+    text-align: left;
+
+    cursor: pointer;
 
     box-shadow:
         0 5px 16px rgba(30, 55, 95, 0.06);
 
-    cursor: pointer;
-
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
-        border-color 0.2s ease,
-        background 0.2s ease;
+        border-color 0.2s ease;
 }
 
 .action:hover {
-    color: #075fd8;
+    color: #075fd8 !important;
 
     transform: translateY(-2px);
 
@@ -377,12 +470,158 @@ a {
 }
 
 
-/* Bank button là button nhưng phải giống các action khác */
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.action .icon {
+    flex: 0 0 46px;
+
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #edf4ff;
+
+    color: #1769df;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.action:hover .icon {
+    transform: scale(1.05);
+}
+
+.action .icon svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.9;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* =========================================================
+   ICON COLORS
+   ========================================================= */
+
+/* Gọi điện */
+
+.call-action .icon {
+    background: #eaf8ef;
+
+    color: #1b9b50;
+}
+
+
+/* Zalo */
+
+.zalo-action .icon {
+    background: #e9f3ff;
+
+    color: #087eff;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 800;
+}
+
+
+/* Facebook */
+
+.facebook-action .icon {
+    background: #eaf2ff;
+
+    color: #1877f2;
+}
+
+.facebook-action .icon svg {
+    fill: currentColor;
+
+    stroke: none;
+}
+
+
+/* Bank */
+
+.bank-action .icon {
+    background: #fff5e7;
+
+    color: #e58a16;
+}
+
+
+/* Contact */
+
+.contact-action .icon {
+    background: #f2edff;
+
+    color: #7047c8;
+}
+
+
+/* =========================================================
+   ACTION TEXT
+   ========================================================= */
+
+.action-text {
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.25;
+}
+
+.action-text b {
+    color: #172f5d;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.action-text small {
+    margin-top: 5px;
+
+    color: #718096;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BANK BUTTON RESET
+   ========================================================= */
 
 button.action {
     width: 100%;
 
     appearance: none;
+
     -webkit-appearance: none;
 
     font-family: inherit;
@@ -413,26 +652,33 @@ button.action {
 }
 
 
-/* Background */
+/* =========================================================
+   MODAL BACKDROP
+   ========================================================= */
 
 .modal-backdrop {
     position: absolute;
 
     inset: 0;
 
-    background: rgba(8, 24, 50, 0.65);
+    background:
+        rgba(8, 24, 50, 0.65);
 
     backdrop-filter: blur(4px);
+
     -webkit-backdrop-filter: blur(4px);
 }
 
 
-/* Modal content */
+/* =========================================================
+   MODAL CONTENT
+   ========================================================= */
 
 .modal-content {
     position: relative;
 
     width: 100%;
+
     max-width: 390px;
 
     padding: 28px 22px 24px;
@@ -448,38 +694,52 @@ button.action {
 
     z-index: 2;
 
-    animation: modalIn 0.2s ease-out;
+    animation:
+        modalIn 0.2s ease-out;
 }
 
 @keyframes modalIn {
+
     from {
         opacity: 0;
-        transform: translateY(12px) scale(0.97);
+
+        transform:
+            translateY(12px)
+            scale(0.97);
     }
 
     to {
         opacity: 1;
-        transform: translateY(0) scale(1);
+
+        transform:
+            translateY(0)
+            scale(1);
     }
 }
 
 
-/* Close */
+/* =========================================================
+   CLOSE BUTTON
+   ========================================================= */
 
 .close {
     position: absolute;
 
     top: 10px;
+
     right: 12px;
 
     width: 38px;
+
     height: 38px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
     border: none;
+
     border-radius: 50%;
 
     background: #f0f3f8;
@@ -487,6 +747,7 @@ button.action {
     color: #4b5565;
 
     font-size: 25px;
+
     line-height: 1;
 
     cursor: pointer;
@@ -497,13 +758,17 @@ button.action {
 }
 
 
-/* QR */
+/* =========================================================
+   BANK QR IMAGE
+   ========================================================= */
 
 .modal-content img {
     display: block;
 
     width: 100%;
+
     max-width: 300px;
+
     height: auto;
 
     margin: 10px auto 16px;
@@ -511,15 +776,13 @@ button.action {
     border-radius: 12px;
 }
 
-
-/* Bank information */
-
 .modal-content p {
     margin: 0;
 
     color: #34445a;
 
     font-size: 15px;
+
     font-weight: 600;
 }
 
@@ -540,21 +803,24 @@ footer {
 
 
 /* =========================================================
-   TABLET / SMALL LAPTOP
+   TABLET / DESKTOP
    ========================================================= */
 
 @media (min-width: 721px) {
+
     body {
         padding: 25px 0;
     }
 
     .card {
         min-height: auto;
+
         border-radius: 24px;
     }
 
     .hero {
-        border-radius: 24px 24px 0 0;
+        border-radius:
+            24px 24px 0 0;
     }
 }
 
@@ -567,41 +833,79 @@ footer {
 
     .card {
         min-height: 100vh;
+
         box-shadow: none;
     }
 
+
+    /* HERO */
+
     .hero {
-        height: 265px;
+        height: 265px !important;
     }
 
-    .avatar-wrap {
-        width: 154px;
-        height: 154px;
 
-        bottom: -77px;
+    /* AVATAR */
+
+    .hero .avatar-wrap {
+        width: 154px !important;
+        height: 154px !important;
+
+        min-width: 154px !important;
+        min-height: 154px !important;
+
+        max-width: 154px !important;
+        max-height: 154px !important;
+
+        bottom: -77px !important;
     }
+
+    .hero .avatar-wrap .avatar {
+        width: 142px !important;
+        height: 142px !important;
+
+        min-width: 142px !important;
+        min-height: 142px !important;
+
+        max-width: 142px !important;
+        max-height: 142px !important;
+    }
+
+
+    /* PROFILE */
 
     .profile {
-        padding: 96px 18px 22px;
+        padding:
+            96px 18px 22px !important;
     }
 
     .profile h1 {
         font-size: 30px;
     }
 
+
+    /* PRIMARY */
+
     .primary-btn {
         min-height: 48px;
 
-        padding: 12px 20px;
+        padding:
+            12px 20px;
 
         font-size: 15px;
     }
+
+
+    /* INTRO */
 
     .intro {
         margin-top: 18px;
 
         font-size: 16px;
     }
+
+
+    /* NETWORK */
 
     .networks {
         gap: 9px;
@@ -615,8 +919,12 @@ footer {
         font-size: 14px;
     }
 
+
+    /* SECTION */
+
     .section {
         padding-left: 18px;
+
         padding-right: 18px;
     }
 
@@ -624,8 +932,12 @@ footer {
         font-size: 21px;
     }
 
+
+    /* SERVICE */
+
     .service-box {
-        padding: 15px 17px;
+        padding:
+            15px 17px;
 
         border-radius: 16px;
     }
@@ -634,247 +946,48 @@ footer {
         font-size: 15px;
     }
 
+
+    /* ACTIONS */
+
     .actions {
-        padding-left: 18px;
-        padding-right: 18px;
+        padding:
+            20px 18px 28px;
 
         gap: 10px;
     }
 
     .action {
-        min-height: 58px;
+        min-height: 62px;
+
+        gap: 10px;
+
+        padding:
+            11px 12px;
 
         border-radius: 14px;
-
-        font-size: 14px;
-    }
-}
-
-
-/* =========================================================
-   VERY SMALL PHONES
-   ========================================================= */
-
-@media (max-width: 400px) {
-
-    .hero {
-        height: 250px;
     }
 
-    .avatar-wrap {
-        width: 145px;
-        height: 145px;
 
-        bottom: -72px;
-    }
-
-    .profile {
-        padding-top: 88px;
-    }
-
-    .profile h1 {
-        font-size: 28px;
-    }
-
-    .primary-btn {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    .intro {
-        font-size: 15px;
-    }
-
-    .networks {
-        gap: 7px;
-    }
-
-    .network {
-        min-height: 52px;
-
-        font-size: 13px;
-    }
-
-    .actions {
-        grid-template-columns: 1fr;
-    }
-
-    .action {
-        min-height: 56px;
-    }
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
-
-:focus-visible {
-    outline: 3px solid rgba(8, 102, 223, 0.35);
-    outline-offset: 3px;
-}
-/* =========================================================
-   PREMIUM CONTACT ICONS
-   ========================================================= */
-
-.actions {
-    align-items: stretch;
-}
-
-.action {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-
-    gap: 14px;
-
-    padding: 14px 18px;
-
-    text-align: left;
-
-    overflow: hidden;
-}
-
-.action .icon {
-    flex: 0 0 48px;
-
-    width: 48px;
-    height: 48px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 14px;
-
-    background: #edf4ff;
-
-    color: #1769df;
-}
-
-.action .icon svg {
-    width: 25px;
-    height: 25px;
-
-    fill: none;
-    stroke: currentColor;
-
-    stroke-width: 1.9;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-/* Facebook */
-.facebook-action .icon {
-    background: #eaf2ff;
-    color: #1877f2;
-}
-
-.facebook-action .icon svg {
-    fill: currentColor;
-    stroke: none;
-}
-
-/* Zalo */
-.zalo-action .icon {
-    background: #e9f3ff;
-
-    color: #087eff;
-
-    font-family: Arial, sans-serif;
-    font-size: 25px;
-    font-weight: 800;
-}
-
-/* Gọi điện */
-.call-action .icon {
-    background: #eaf8ef;
-    color: #1b9b50;
-}
-
-/* Thanh toán */
-.bank-action .icon {
-    background: #fff5e7;
-    color: #e58a16;
-}
-
-/* Lưu liên hệ */
-.contact-action .icon {
-    background: #f2edff;
-    color: #7047c8;
-}
-
-
-/* =========================================================
-   ACTION TEXT
-   ========================================================= */
-
-.action-text {
-    min-width: 0;
-
-    display: flex;
-    flex-direction: column;
-
-    line-height: 1.25;
-}
-
-.action-text b {
-    color: #172f5d;
-
-    font-size: 16px;
-    font-weight: 800;
-
-    white-space: nowrap;
-}
-
-.action-text small {
-    margin-top: 5px;
-
-    color: #718096;
-
-    font-size: 13px;
-    font-weight: 500;
-
-    white-space: nowrap;
-}
-
-
-/* Hover */
-.action:hover .icon {
-    transform: scale(1.05);
-}
-
-.action .icon {
-    transition: transform 0.2s ease;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
-@media (max-width: 600px) {
-
-    .action {
-        gap: 11px;
-        padding: 12px 13px;
-    }
+    /* ICON */
 
     .action .icon {
-        flex-basis: 44px;
+        flex-basis: 43px;
 
-        width: 44px;
-        height: 44px;
+        width: 43px;
+
+        height: 43px;
 
         border-radius: 12px;
     }
 
     .action .icon svg {
-        width: 22px;
-        height: 22px;
+        width: 21px;
+
+        height: 21px;
     }
+
+
+    /* TEXT */
 
     .action-text b {
         font-size: 14px;
@@ -882,6 +995,7 @@ footer {
 
     .action-text small {
         margin-top: 4px;
+
         font-size: 12px;
     }
 }
@@ -893,6 +1007,80 @@ footer {
 
 @media (max-width: 400px) {
 
+    .hero {
+        height: 250px !important;
+    }
+
+
+    /* AVATAR */
+
+    .hero .avatar-wrap {
+        width: 145px !important;
+        height: 145px !important;
+
+        min-width: 145px !important;
+        min-height: 145px !important;
+
+        max-width: 145px !important;
+        max-height: 145px !important;
+
+        bottom: -72px !important;
+    }
+
+    .hero .avatar-wrap .avatar {
+        width: 133px !important;
+        height: 133px !important;
+
+        min-width: 133px !important;
+        min-height: 133px !important;
+
+        max-width: 133px !important;
+        max-height: 133px !important;
+    }
+
+
+    /* PROFILE */
+
+    .profile {
+        padding-top: 88px !important;
+    }
+
+    .profile h1 {
+        font-size: 28px;
+    }
+
+
+    /* CTA */
+
+    .primary-btn {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    /* INTRO */
+
+    .intro {
+        font-size: 15px;
+    }
+
+
+    /* NETWORK */
+
+    .networks {
+        gap: 7px;
+    }
+
+    .network {
+        min-height: 52px;
+
+        font-size: 13px;
+    }
+
+
+    /* ACTIONS */
+
     .actions {
         grid-template-columns: 1fr;
     }
@@ -900,13 +1088,15 @@ footer {
     .action {
         min-height: 64px;
 
-        padding: 10px 14px;
+        padding:
+            10px 14px;
     }
 
     .action .icon {
         flex-basis: 46px;
 
         width: 46px;
+
         height: 46px;
     }
 
@@ -917,4 +1107,16 @@ footer {
     .action-text small {
         font-size: 12.5px;
     }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+    outline:
+        3px solid rgba(8, 102, 223, 0.35);
+
+    outline-offset: 3px;
 }
