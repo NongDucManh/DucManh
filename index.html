@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b67d1">
+  <meta name="description" content="Đức Mạnh - Tư vấn và đăng ký gói Data, Combo Viettel, VinaPhone, MobiFone.">
+  <title>Đức Mạnh | Gói Data & Combo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="profile-panel">
+      <div class="hero">
+        <div class="network network-1"></div>
+        <div class="network network-2"></div>
+        <img class="avatar" src="assets/avatar.jpg" alt="Đức Mạnh">
+      </div>
+
+      <div class="profile-content">
+        <h1>Đức Mạnh</h1>
+        <div class="badge">Tư vấn & đăng ký gói cước</div>
+        <p class="intro">Hỗ trợ đăng ký các gói <strong>Data, Combo</strong> của các nhà mạng.</p>
+
+        <div class="operators">
+          <div class="operator viettel">
+            <div class="operator-logo">Viettel</div>
+            <strong>Viettel</strong>
+          </div>
+          <div class="operator vinaphone">
+            <div class="operator-logo">VinaPhone</div>
+            <strong>VinaPhone</strong>
+          </div>
+          <div class="operator mobifone">
+            <div class="operator-logo">mobiFone</div>
+            <strong>MobiFone</strong>
+          </div>
+        </div>
+
+        <h2>🚀 Dịch vụ của tôi</h2>
+        <div class="service-card">
+          <div>✓ Đăng ký gói Data 4G/5G</div>
+          <div>✓ Đăng ký gói Combo (Thoại + Data)</div>
+          <div>✓ Các gói Internet & ưu đãi</div>
+          <div>✓ Tư vấn chọn gói phù hợp nhu cầu</div>
+          <div>✓ Hỗ trợ đăng ký nhanh chóng</div>
+        </div>
+
+        <div class="contact-grid">
+          <a class="contact call" href="tel:0949408394">
+            <span class="icon">☎</span><b>Gọi điện</b><small>0949408394</small>
+          </a>
+          <a class="contact zalo" href="https://zalo.me/0949408394" target="_blank" rel="noopener">
+            <span class="icon">Z</span><b>Zalo</b><small>0949408394</small>
+          </a>
+          <a class="contact facebook" href="https://www.facebook.com/YOUR_FACEBOOK" target="_blank" rel="noopener">
+            <span class="icon">f</span><b>Facebook</b><small>Trang cá nhân</small>
+          </a>
+          <button class="contact" id="saveContact" type="button">
+            <span class="icon">＋</span><b>Lưu liên hệ</b><small>vCard</small>
+          </button>
+          <button class="contact" id="sharePage" type="button">
+            <span class="icon">↗</span><b>Chia sẻ</b><small>Trang này</small>
+          </button>
+        </div>
+
+        <div class="commitment">
+          <h3>☆ CAM KẾT</h3>
+          <div class="commit-grid">
+            <div><b>♢ Uy tín</b><span>Tư vấn tận tâm</span></div>
+            <div><b>🚀 Nhanh chóng</b><span>Đăng ký siêu tốc</span></div>
+            <div><b>◉ Hỗ trợ</b><span>Sẵn sàng hỗ trợ</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment-panel">
+      <div class="payment-hero">
+        <div class="bank-icon">▣</div>
+        <h2>THANH TOÁN</h2>
+        <p>QUÉT QR ĐỂ CHUYỂN KHOẢN</p>
+      </div>
+
+      <div class="payment-content">
+        <div class="bank-card">
+          <p>Quét mã để chuyển tiền đến</p>
+          <h3>NONG DUC MANH</h3>
+          <div class="account-number">8888 8778 77</div>
+          <img class="bank-qr" src="assets/bank-qr.jpg" alt="QR thanh toán Techcombank">
+          <div class="security">♧ Thanh toán an toàn & bảo mật</div>
+          <p class="thanks">Cảm ơn bạn đã tin tưởng và ủng hộ!</p>
+        </div>
+
+        <div class="guide">
+          <h3>HƯỚNG DẪN THANH TOÁN</h3>
+          <div class="step"><span>▣</span><div><b>Mở ứng dụng ngân hàng</b><small>Mở app ngân hàng của bạn</small></div></div>
+          <div class="step"><span>⌗</span><div><b>Chọn quét mã QR</b><small>Chọn tính năng quét mã QR</small></div></div>
+          <div class="step"><span>＄</span><div><b>Quét mã & xác nhận</b><small>Kiểm tra thông tin trước khi thanh toán</small></div></div>
+          <div class="step"><span>✓</span><div><b>Hoàn tất</b><small>Thanh toán thành công</small></div></div>
+        </div>
+
+        <div class="page-qr-card">
+          <h3>QR TRANG DỊCH VỤ</h3>
+          <p>Dùng QR này để mở trang trên điện thoại.</p>
+          <div id="pageQr"></div>
+          <small>Nếu QR chưa hiện, hãy tải trang sau khi đã đưa website lên GitHub Pages.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>© <span id="year"></span> Đức Mạnh · Tư vấn & đăng ký gói Data / Combo</footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
