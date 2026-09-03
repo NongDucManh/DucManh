@@ -713,3 +713,208 @@ footer {
     outline: 3px solid rgba(8, 102, 223, 0.35);
     outline-offset: 3px;
 }
+/* =========================================================
+   PREMIUM CONTACT ICONS
+   ========================================================= */
+
+.actions {
+    align-items: stretch;
+}
+
+.action {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 14px;
+
+    padding: 14px 18px;
+
+    text-align: left;
+
+    overflow: hidden;
+}
+
+.action .icon {
+    flex: 0 0 48px;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #edf4ff;
+
+    color: #1769df;
+}
+
+.action .icon svg {
+    width: 25px;
+    height: 25px;
+
+    fill: none;
+    stroke: currentColor;
+
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Facebook */
+.facebook-action .icon {
+    background: #eaf2ff;
+    color: #1877f2;
+}
+
+.facebook-action .icon svg {
+    fill: currentColor;
+    stroke: none;
+}
+
+/* Zalo */
+.zalo-action .icon {
+    background: #e9f3ff;
+
+    color: #087eff;
+
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+/* Gọi điện */
+.call-action .icon {
+    background: #eaf8ef;
+    color: #1b9b50;
+}
+
+/* Thanh toán */
+.bank-action .icon {
+    background: #fff5e7;
+    color: #e58a16;
+}
+
+/* Lưu liên hệ */
+.contact-action .icon {
+    background: #f2edff;
+    color: #7047c8;
+}
+
+
+/* =========================================================
+   ACTION TEXT
+   ========================================================= */
+
+.action-text {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.25;
+}
+
+.action-text b {
+    color: #172f5d;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+.action-text small {
+    margin-top: 5px;
+
+    color: #718096;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    white-space: nowrap;
+}
+
+
+/* Hover */
+.action:hover .icon {
+    transform: scale(1.05);
+}
+
+.action .icon {
+    transition: transform 0.2s ease;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .action {
+        gap: 11px;
+        padding: 12px 13px;
+    }
+
+    .action .icon {
+        flex-basis: 44px;
+
+        width: 44px;
+        height: 44px;
+
+        border-radius: 12px;
+    }
+
+    .action .icon svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .action-text b {
+        font-size: 14px;
+    }
+
+    .action-text small {
+        margin-top: 4px;
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .actions {
+        grid-template-columns: 1fr;
+    }
+
+    .action {
+        min-height: 64px;
+
+        padding: 10px 14px;
+    }
+
+    .action .icon {
+        flex-basis: 46px;
+
+        width: 46px;
+        height: 46px;
+    }
+
+    .action-text b {
+        font-size: 15px;
+    }
+
+    .action-text small {
+        font-size: 12.5px;
+    }
+}
