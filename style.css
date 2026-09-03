@@ -51,15 +51,13 @@ a {
    ========================================================= */
 
 .hero {
-    position: relative;
-    height: 265px;
-
     background: linear-gradient(
         135deg,
         #0759d9 0%,
         #0878ed 55%,
         #1598f5 100%
     );
+};
 
     display: flex;
     justify-content: center;
