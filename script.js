@@ -8,7 +8,7 @@ DÁN LINK FACEBOOK CỦA BẠN VÀO ĐÂY.
 Ví dụ:
 
 const FACEBOOK_URL =
-  "https://www.facebook.com/ten.facebook.cua.ban";
+  "https://web.facebook.com/llllllllllvllllllllll/";
 
 */
 
