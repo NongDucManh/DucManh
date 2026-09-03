@@ -1,47 +1,37 @@
 /* =========================================
-   CẤU HÌNH FACEBOOK
-   =========================================
+   FACEBOOK
+   ========================================= */
 
-   Khi có link Facebook, điền vào giữa 2 dấu "":
-   
-   Ví dụ:
-   const FACEBOOK_URL = "https://www.facebook.com/ducmanh";
-
-   Nếu để trống:
-   const FACEBOOK_URL = "";
-
-   => Nút Facebook sẽ tự động ẩn.
-*/
-
+// DÁN LINK FACEBOOK CỦA BẠN VÀO ĐÂY
 const FACEBOOK_URL = "https://web.facebook.com/llllllllllvllllllllll/";
 
 
 /* =========================================
-   FACEBOOK
+   HIỂN THỊ FACEBOOK
    ========================================= */
 
 const facebookLink = document.getElementById("facebookLink");
 
 if (facebookLink) {
 
-  if (FACEBOOK_URL.trim() !== "") {
+    if (FACEBOOK_URL.trim() !== "") {
 
-    // Có link Facebook => hiện nút
-    facebookLink.href = FACEBOOK_URL;
-    facebookLink.style.display = "flex";
+        // Có link Facebook
+        facebookLink.href = FACEBOOK_URL;
+        facebookLink.style.display = "flex";
 
-  } else {
+    } else {
 
-    // Chưa có link => ẩn nút Facebook
-    facebookLink.style.display = "none";
+        // Chưa có link Facebook
+        facebookLink.style.display = "none";
 
-  }
+    }
 
 }
 
 
 /* =========================================
-   QR THANH TOÁN NGÂN HÀNG
+   QR NGÂN HÀNG
    ========================================= */
 
 const bankModal = document.getElementById("bankModal");
@@ -50,93 +40,85 @@ const closeBtn = document.getElementById("closeBtn");
 const closeModal = document.getElementById("closeModal");
 
 
-/* Mở QR ngân hàng */
-
-function openBankQR() {
-
-  if (!bankModal) return;
-
-  bankModal.classList.add("show");
-
-  bankModal.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-  // Không cho cuộn trang phía sau popup
-  document.body.style.overflow = "hidden";
-
-}
-
-
-/* Đóng QR ngân hàng */
-
-function hideBankQR() {
-
-  if (!bankModal) return;
-
-  bankModal.classList.remove("show");
-
-  bankModal.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-  // Cho phép cuộn trang trở lại
-  document.body.style.overflow = "";
-
-}
-
-
-/* Nút Thanh toán */
+/* Mở QR */
 
 if (bankBtn) {
 
-  bankBtn.addEventListener(
-    "click",
-    openBankQR
-  );
+    bankBtn.addEventListener("click", function () {
+
+        bankModal.classList.add("show");
+
+        bankModal.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        document.body.style.overflow = "hidden";
+
+    });
 
 }
 
 
-/* Nút X */
+/* Đóng QR bằng X */
 
 if (closeBtn) {
 
-  closeBtn.addEventListener(
-    "click",
-    hideBankQR
-  );
+    closeBtn.addEventListener("click", function () {
+
+        bankModal.classList.remove("show");
+
+        bankModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+
+    });
 
 }
 
 
-/* Bấm ra ngoài popup */
+/* Đóng QR khi bấm bên ngoài */
 
 if (closeModal) {
 
-  closeModal.addEventListener(
-    "click",
-    hideBankQR
-  );
+    closeModal.addEventListener("click", function () {
+
+        bankModal.classList.remove("show");
+
+        bankModal.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        document.body.style.overflow = "";
+
+    });
 
 }
 
 
-/* =========================================
-   PHÍM ESC ĐỂ ĐÓNG POPUP
-   ========================================= */
+/* Đóng QR bằng phím ESC */
 
-document.addEventListener(
-  "keydown",
-  function (event) {
+document.addEventListener("keydown", function (event) {
 
     if (event.key === "Escape") {
 
-      hideBankQR();
+        if (bankModal) {
+
+            bankModal.classList.remove("show");
+
+            bankModal.setAttribute(
+                "aria-hidden",
+                "true"
+            );
+
+            document.body.style.overflow = "";
+
+        }
 
     }
 
-  }
-);
+});
