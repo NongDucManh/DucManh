@@ -1,6 +1,11 @@
 /* =========================================================
-   ĐỨC MẠNH - TRANG THÔNG TIN & ĐĂNG KÝ GÓI CƯỚC
-   GIỮ NGUYÊN GIAO DIỆN BẢN CŨ + THÊM BANNER
+   ĐỨC MẠNH - PERSONAL SERVICE PAGE
+   COMPLETE STYLE
+   ========================================================= */
+
+
+/* =========================================================
+   RESET
    ========================================================= */
 
 * {
@@ -11,29 +16,37 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
 body {
     margin: 0;
     padding: 0;
-    background: #f2f6fb;
-    color: #26354d;
+}
+
+body {
+    background: #f3f6fb;
+    color: #172033;
+
     font-family:
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         Roboto,
+        Helvetica,
         Arial,
         sans-serif;
+
     line-height: 1.6;
+
     overflow-x: hidden;
 }
 
 a {
     text-decoration: none;
-    color: inherit;
 }
 
-button {
-    font-family: inherit;
+button,
+a {
+    font: inherit;
 }
 
 
@@ -43,40 +56,40 @@ button {
 
 .card {
     width: 100%;
-    max-width: 760px;
-    margin: 0 auto;
-    background: #ffffff;
+    max-width: 720px;
+
     min-height: 100vh;
-    box-shadow: 0 10px 45px rgba(30, 60, 100, .08);
+
+    margin: 0 auto;
+
+    background: #ffffff;
+
     overflow: hidden;
+
+    box-shadow:
+        0 10px 40px rgba(20, 40, 80, 0.08);
 }
 
 
 /* =========================================================
-   BANNER
+   HERO
    ========================================================= */
 
 .hero {
-    position: relative;
-    width: 100%;
-    height: 330px;
+    position: relative !important;
 
-    background-image: url("assets/hero-goicuoc.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+    width: 100% !important;
+    height: 285px !important;
 
-    overflow: visible;
-}
+    /* Banner sử dụng ảnh assets/hero-bg.jpg */
+    background-image: url("assets/hero-bg.jpg") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
 
+    display: block !important;
 
-/*
-   Không hiển thị tên cũ trên banner.
-   Banner mới đã có thiết kế riêng.
-*/
-
-.hero-content {
-    display: none;
+    overflow: visible !important;
 }
 
 
@@ -84,41 +97,61 @@ button {
    AVATAR
    ========================================================= */
 
-.avatar-wrap {
-    position: absolute;
-    z-index: 20;
+.hero .avatar-wrap {
+    position: absolute !important;
 
-    left: 50%;
-    bottom: -78px;
+    left: 50% !important;
+    top: auto !important;
+    bottom: -82px !important;
 
-    transform: translateX(-50%);
+    transform: translateX(-50%) !important;
 
-    width: 158px;
-    height: 158px;
+    width: 166px !important;
+    height: 166px !important;
 
-    padding: 6px;
+    min-width: 166px !important;
+    min-height: 166px !important;
 
-    border-radius: 50%;
+    max-width: 166px !important;
+    max-height: 166px !important;
 
-    background: #ffffff;
+    padding: 6px !important;
+
+    background: #ffffff !important;
+
+    border-radius: 50% !important;
 
     box-shadow:
-        0 12px 32px rgba(12, 55, 120, .25);
+        0 12px 30px rgba(0, 45, 110, 0.22) !important;
 
-    overflow: hidden;
+    z-index: 20 !important;
+
+    overflow: hidden !important;
 }
 
-.avatar {
-    display: block;
 
-    width: 146px;
-    height: 146px;
+.hero .avatar-wrap .avatar {
+    display: block !important;
 
-    border-radius: 50%;
+    width: 154px !important;
+    height: 154px !important;
 
-    object-fit: cover;
+    min-width: 154px !important;
+    min-height: 154px !important;
 
-    object-position: center 32%;
+    max-width: 154px !important;
+    max-height: 154px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: 0 !important;
+
+    border-radius: 50% !important;
+
+    object-fit: cover !important;
+
+    object-position: center 32% !important;
 }
 
 
@@ -127,8 +160,24 @@ button {
    ========================================================= */
 
 .profile {
-    padding: 100px 24px 30px;
+    position: relative;
+
+    padding: 105px 24px 25px;
+
     text-align: center;
+
+    background: #ffffff;
+}
+
+.profile h1 {
+    margin: 0 0 12px;
+
+    color: #0c2e63;
+
+    font-size: 34px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
 }
 
 
@@ -142,39 +191,46 @@ button {
     align-items: center;
     justify-content: center;
 
-    min-height: 54px;
+    width: auto;
+    max-width: 92%;
 
-    padding: 13px 28px;
+    min-height: 50px;
 
-    margin: 10px auto 18px;
+    padding: 13px 24px;
 
-    border-radius: 30px;
+    border-radius: 999px;
 
     background:
         linear-gradient(
             135deg,
-            #0875e8,
-            #168df0
+            #0866df,
+            #087eea
         );
 
     color: #ffffff !important;
 
-    font-size: 18px;
-    font-weight: 750;
-
-    line-height: 1.3;
+    font-size: 16px;
+    font-weight: 700;
 
     box-shadow:
-        0 8px 22px rgba(8, 117, 232, .24);
+        0 8px 20px rgba(8, 102, 223, 0.22);
 
-    transition: .2s ease;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .primary-btn:hover {
+    color: #ffffff !important;
+
     transform: translateY(-2px);
 
     box-shadow:
-        0 11px 27px rgba(8, 117, 232, .3);
+        0 12px 25px rgba(8, 102, 223, 0.28);
+}
+
+.primary-btn:active {
+    transform: translateY(0);
 }
 
 
@@ -183,21 +239,23 @@ button {
    ========================================================= */
 
 .intro {
-    max-width: 650px;
+    max-width: 620px;
 
-    margin: 0 auto 24px;
+    margin: 20px auto 22px;
 
-    color: #56657a;
+    color: #4c5b70;
 
-    font-size: 18px;
+    font-size: 17px;
 
-    line-height: 1.55;
+    line-height: 1.65;
 
     text-align: center;
 }
 
 .intro strong {
-    color: #1268d8;
+    color: #075fd8;
+
+    font-weight: 750;
 }
 
 
@@ -213,68 +271,60 @@ button {
 
     gap: 12px;
 
-    max-width: 650px;
+    max-width: 620px;
 
     margin: 0 auto;
 }
 
 .network {
+    min-height: 58px;
+
     display: flex;
 
     align-items: center;
     justify-content: center;
 
-    min-height: 68px;
+    padding: 10px;
 
-    padding: 12px 10px;
+    border-radius: 14px;
 
-    border-radius: 17px;
-
-    font-size: 17px;
+    font-size: 15px;
 
     font-weight: 800;
 
-    transition: .2s ease;
+    border: 1px solid transparent;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 .network:hover {
     transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 20px rgba(30, 60, 100, .08);
 }
-
-
-/* Viettel */
 
 .network.viettel {
-    background: #edf8f1;
+    background: #eaf7ed;
 
-    border: 1px solid #cdebd8;
+    color: #16843c;
 
-    color: #238b4b;
+    border-color: #ccebd4;
 }
-
-
-/* VinaPhone */
 
 .network.vinaphone {
-    background: #eef3ff;
+    background: #edf3ff;
 
-    border: 1px solid #d5e0fa;
+    color: #245dcc;
 
-    color: #2c61bd;
+    border-color: #d5e2ff;
 }
 
-
-/* MobiFone */
-
 .network.mobifone {
-    background: #f3edff;
+    background: #f2ecff;
 
-    border: 1px solid #e1d5fa;
+    color: #7040c8;
 
-    color: #7047bd;
+    border-color: #e1d4ff;
 }
 
 
@@ -283,17 +333,15 @@ button {
    ========================================================= */
 
 .section {
-    padding: 12px 24px 18px;
+    padding: 12px 24px 10px;
 }
 
 .section h2 {
-    margin: 12px 0 15px;
+    margin: 10px 0 16px;
 
-    color: #10376e;
+    color: #102f60;
 
-    font-size: 24px;
-
-    line-height: 1.35;
+    font-size: 22px;
 
     font-weight: 800;
 
@@ -306,31 +354,35 @@ button {
    ========================================================= */
 
 .service-box {
-    padding: 18px 22px;
+    max-width: 620px;
 
-    border: 1px solid #e2e9f2;
+    margin: 0 auto;
 
-    border-radius: 20px;
+    padding: 18px 20px;
 
     background: #ffffff;
 
+    border: 1px solid #e5ebf4;
+
+    border-radius: 18px;
+
     box-shadow:
-        0 7px 22px rgba(25, 50, 90, .06);
+        0 7px 22px rgba(25, 50, 90, 0.07);
 }
 
 .service-box p {
     margin: 0;
 
-    padding: 11px 0;
+    padding: 9px 0;
 
-    color: #435269;
+    color: #34445a;
 
-    font-size: 16px;
+    font-size: 15.5px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 
     border-bottom:
-        1px solid #edf1f5;
+        1px solid #edf1f6;
 }
 
 .service-box p:last-child {
@@ -350,53 +402,74 @@ button {
 
     gap: 12px;
 
-    max-width: 650px;
+    padding: 20px 24px 28px;
 
-    margin: 8px auto 30px;
-
-    padding: 0 24px;
+    align-items: stretch;
 }
 
 
 /* =========================================================
-   ACTION CARD
+   ACTION BUTTON
    ========================================================= */
 
 .action {
+    position: relative;
+
+    min-height: 66px;
+
     display: flex;
 
     align-items: center;
+    justify-content: flex-start;
 
-    gap: 12px;
+    gap: 13px;
 
-    min-height: 68px;
+    padding: 12px 15px;
 
-    padding: 11px 14px;
+    border:
+        1px solid #e3e9f2;
 
-    border: 1px solid #e1e8f1;
-
-    border-radius: 17px;
+    border-radius: 16px;
 
     background: #ffffff;
 
+    color: #18345f !important;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    text-align: left;
+
+    cursor: pointer;
+
     box-shadow:
-        0 6px 18px rgba(30, 55, 90, .06);
+        0 5px 16px rgba(30, 55, 95, 0.06);
 
     transition:
-        transform .2s ease,
-        box-shadow .2s ease;
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
 }
 
 .action:hover {
+    color: #075fd8 !important;
+
     transform: translateY(-2px);
 
+    border-color: #cbdcf7;
+
     box-shadow:
-        0 10px 24px rgba(30, 55, 90, .1);
+        0 9px 22px rgba(25, 65, 120, 0.10);
+}
+
+.action:active {
+    transform: translateY(0);
 }
 
 
 /* =========================================================
-   ACTION ICON
+   ICON
    ========================================================= */
 
 .action .icon {
@@ -412,56 +485,90 @@ button {
 
     border-radius: 13px;
 
-    font-size: 25px;
+    background: #edf4ff;
 
-    font-weight: 850;
+    color: #1769df;
+
+    transition:
+        transform 0.2s ease;
+}
+
+.action:hover .icon {
+    transform: scale(1.05);
+}
+
+.action .icon svg {
+    width: 24px;
+    height: 24px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.9;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
 }
 
 
+/* =========================================================
+   ICON COLORS
+   ========================================================= */
+
 /* Gọi điện */
 
-.call .icon {
-    background: #e9f8ef;
+.call-action .icon {
+    background: #eaf8ef;
 
-    color: #15964a;
+    color: #1b9b50;
 }
 
 
 /* Zalo */
 
-.zalo .icon {
+.zalo-action .icon {
     background: #e9f3ff;
 
     color: #087eff;
 
     font-family: Arial, sans-serif;
+
+    font-size: 24px;
+
+    font-weight: 800;
 }
 
 
 /* Facebook */
 
-.facebook .icon {
-    background: #eaf1ff;
+.facebook-action .icon {
+    background: #eaf2ff;
 
     color: #1877f2;
+}
 
-    font-family: Arial, sans-serif;
+.facebook-action .icon svg {
+    fill: currentColor;
+
+    stroke: none;
 }
 
 
-/* Ngân hàng */
+/* Bank */
 
-.bank .icon {
-    background: #fff2e7;
+.bank-action .icon {
+    background: #fff5e7;
 
-    color: #e87920;
+    color: #e58a16;
 }
 
 
-/* VCard */
+/* Contact */
 
-.contact .icon {
-    background: #f1edff;
+.contact-action .icon {
+    background: #f2edff;
 
     color: #7047c8;
 }
@@ -471,52 +578,56 @@ button {
    ACTION TEXT
    ========================================================= */
 
-.action b,
-.action small {
-    display: block;
+.action-text {
+    min-width: 0;
 
-    text-align: left;
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: 1.25;
 }
 
-.action b {
-    color: #153b76;
+.action-text b {
+    color: #172f5d;
 
-    font-size: 15px;
-
-    line-height: 1.3;
+    font-size: 16px;
 
     font-weight: 800;
+
+    white-space: nowrap;
 }
 
-.action small {
-    margin-top: 3px;
+.action-text small {
+    margin-top: 5px;
 
-    color: #748197;
+    color: #718096;
 
-    font-size: 12.5px;
+    font-size: 13px;
 
-    line-height: 1.3;
+    font-weight: 500;
+
+    white-space: nowrap;
 }
 
 
 /* =========================================================
-   BANK BUTTON
+   BANK BUTTON RESET
    ========================================================= */
 
 button.action {
     width: 100%;
 
-    border:
-        1px solid #e1e8f1;
+    appearance: none;
 
-    cursor: pointer;
+    -webkit-appearance: none;
 
-    background: #ffffff;
+    font-family: inherit;
 }
 
 
 /* =========================================================
-   MODAL THANH TOÁN
+   MODAL
    ========================================================= */
 
 .modal {
@@ -524,26 +635,24 @@ button.action {
 
     inset: 0;
 
-    z-index: 1000;
-
     display: none;
 
     align-items: center;
     justify-content: center;
 
     padding: 20px;
+
+    z-index: 9999;
 }
 
 .modal.show {
     display: flex;
 }
 
-.modal[aria-hidden="false"] {
-    display: flex;
-}
 
-
-/* nền tối */
+/* =========================================================
+   MODAL BACKDROP
+   ========================================================= */
 
 .modal-backdrop {
     position: absolute;
@@ -551,73 +660,89 @@ button.action {
     inset: 0;
 
     background:
-        rgba(5, 20, 40, .65);
+        rgba(8, 24, 50, 0.65);
 
-    backdrop-filter:
-        blur(5px);
-}
+    backdrop-filter: blur(4px);
 
-
-/* hộp QR */
-
-.modal-content {
-    position: relative;
-
-    z-index: 2;
-
-    width: 100%;
-
-    max-width: 420px;
-
-    max-height: 90vh;
-
-    overflow: auto;
-
-    padding: 22px;
-
-    border-radius: 22px;
-
-    background: #ffffff;
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, .25);
-
-    text-align: center;
-}
-
-.modal-content img {
-    display: block;
-
-    width: 100%;
-
-    max-width: 350px;
-
-    margin: 10px auto 15px;
-
-    border-radius: 12px;
+    -webkit-backdrop-filter: blur(4px);
 }
 
 
 /* =========================================================
-   CLOSE
+   MODAL CONTENT
+   ========================================================= */
+
+.modal-content {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 390px;
+
+    padding: 28px 22px 24px;
+
+    background: #ffffff;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.25);
+
+    text-align: center;
+
+    z-index: 2;
+
+    animation:
+        modalIn 0.2s ease-out;
+}
+
+@keyframes modalIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(12px)
+            scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =========================================================
+   CLOSE BUTTON
    ========================================================= */
 
 .close {
     position: absolute;
 
     top: 10px;
+
     right: 12px;
 
     width: 38px;
+
     height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
 
     border: none;
 
     border-radius: 50%;
 
-    background: #f1f4f8;
+    background: #f0f3f8;
 
-    color: #405066;
+    color: #4b5565;
 
     font-size: 25px;
 
@@ -627,22 +752,34 @@ button.action {
 }
 
 .close:hover {
-    background: #e6ebf2;
+    background: #e5eaf2;
 }
 
 
 /* =========================================================
-   BANK NOTE
+   BANK QR IMAGE
    ========================================================= */
 
-.bank-note {
+.modal-content img {
+    display: block;
+
+    width: 100%;
+
+    max-width: 300px;
+
+    height: auto;
+
+    margin: 10px auto 16px;
+
+    border-radius: 12px;
+}
+
+.modal-content p {
     margin: 0;
 
-    color: #536176;
+    color: #34445a;
 
-    font-size: 14px;
-
-    line-height: 1.5;
+    font-size: 15px;
 
     font-weight: 600;
 }
@@ -653,8 +790,7 @@ button.action {
    ========================================================= */
 
 footer {
-    padding:
-        8px 24px 30px;
+    padding: 5px 24px 28px;
 
     color: #8a97a9;
 
@@ -665,22 +801,24 @@ footer {
 
 
 /* =========================================================
-   DESKTOP
+   TABLET / DESKTOP
    ========================================================= */
 
-@media (min-width: 761px) {
+@media (min-width: 721px) {
 
     body {
-        padding: 24px 0;
+        padding: 25px 0;
     }
 
     .card {
-        border-radius: 25px;
+        min-height: auto;
+
+        border-radius: 24px;
     }
 
     .hero {
         border-radius:
-            25px 25px 0 0;
+            24px 24px 0 0;
     }
 }
 
@@ -692,81 +830,95 @@ footer {
 @media (max-width: 600px) {
 
     .card {
+        min-height: 100vh;
+
         box-shadow: none;
     }
 
 
-    /* Banner */
+    /* HERO */
 
     .hero {
-        height: 275px;
-
-        background-size: cover;
-
-        background-position: center center;
+        height: 265px !important;
     }
 
 
-    /* Avatar */
+    /* AVATAR */
 
-    .avatar-wrap {
-        width: 150px;
-        height: 150px;
+    .hero .avatar-wrap {
+        width: 154px !important;
+        height: 154px !important;
 
-        bottom: -75px;
+        min-width: 154px !important;
+        min-height: 154px !important;
+
+        max-width: 154px !important;
+        max-height: 154px !important;
+
+        bottom: -77px !important;
     }
 
-    .avatar {
-        width: 138px;
-        height: 138px;
+    .hero .avatar-wrap .avatar {
+        width: 142px !important;
+        height: 142px !important;
+
+        min-width: 142px !important;
+        min-height: 142px !important;
+
+        max-width: 142px !important;
+        max-height: 142px !important;
     }
 
 
-    /* Profile */
+    /* PROFILE */
 
     .profile {
         padding:
-            94px 18px 25px;
+            96px 18px 22px !important;
+    }
+
+    .profile h1 {
+        font-size: 30px;
     }
 
 
-    /* Button */
+    /* PRIMARY */
 
     .primary-btn {
-        max-width: 94%;
+        min-height: 48px;
 
         padding:
-            13px 22px;
-
-        font-size: 17px;
-    }
-
-
-    /* Intro */
-
-    .intro {
-        font-size: 16px;
-    }
-
-
-    /* Nhà mạng */
-
-    .networks {
-        gap: 8px;
-    }
-
-    .network {
-        min-height: 60px;
-
-        padding: 9px 5px;
-
-        border-radius: 14px;
+            12px 20px;
 
         font-size: 15px;
     }
 
 
-    /* Sections */
+    /* INTRO */
+
+    .intro {
+        margin-top: 18px;
+
+        font-size: 16px;
+    }
+
+
+    /* NETWORK */
+
+    .networks {
+        gap: 9px;
+    }
+
+    .network {
+        min-height: 54px;
+
+        border-radius: 12px;
+
+        font-size: 14px;
+    }
+
+
+    /* SECTION */
 
     .section {
         padding-left: 18px;
@@ -775,170 +927,194 @@ footer {
     }
 
     .section h2 {
-        font-size: 22px;
+        font-size: 21px;
     }
 
 
-    /* Services */
+    /* SERVICE */
 
     .service-box {
         padding:
-            14px 16px;
+            15px 17px;
 
-        border-radius: 17px;
+        border-radius: 16px;
     }
 
     .service-box p {
-        padding:
-            10px 0;
-
         font-size: 15px;
     }
 
 
-    /* Actions */
+    /* ACTIONS */
 
     .actions {
-        gap: 9px;
-
         padding:
-            0 18px;
+            20px 18px 28px;
 
-        margin-bottom:
-            25px;
+        gap: 10px;
     }
 
     .action {
-        min-height:
-            64px;
+        min-height: 62px;
 
-        gap: 9px;
+        gap: 10px;
 
         padding:
-            10px 11px;
+            11px 12px;
 
-        border-radius:
-            15px;
+        border-radius: 14px;
     }
+
+
+    /* ICON */
 
     .action .icon {
-        flex:
-            0 0 42px;
+        flex-basis: 43px;
 
-        width:
-            42px;
+        width: 43px;
 
-        height:
-            42px;
+        height: 43px;
 
-        border-radius:
-            12px;
-
-        font-size:
-            22px;
+        border-radius: 12px;
     }
 
-    .action b {
-        font-size:
-            14px;
-    }
+    .action .icon svg {
+        width: 21px;
 
-    .action small {
-        font-size:
-            11.5px;
+        height: 21px;
     }
 
 
-    /* Modal */
+    /* TEXT */
 
-    .modal {
-        padding:
-            15px;
+    .action-text b {
+        font-size: 14px;
     }
 
-    .modal-content {
-        padding:
-            18px;
+    .action-text small {
+        margin-top: 4px;
 
-        border-radius:
-            19px;
+        font-size: 12px;
     }
-
 }
 
 
 /* =========================================================
-   ĐIỆN THOẠI NHỎ
+   SMALL PHONE
    ========================================================= */
 
 @media (max-width: 400px) {
 
     .hero {
-        height:
-            255px;
+        height: 250px !important;
     }
 
 
-    .avatar-wrap {
-        width:
-            140px;
+    /* AVATAR */
 
-        height:
-            140px;
+    .hero .avatar-wrap {
+        width: 145px !important;
+        height: 145px !important;
 
-        bottom:
-            -70px;
+        min-width: 145px !important;
+        min-height: 145px !important;
+
+        max-width: 145px !important;
+        max-height: 145px !important;
+
+        bottom: -72px !important;
+    }
+
+    .hero .avatar-wrap .avatar {
+        width: 133px !important;
+        height: 133px !important;
+
+        min-width: 133px !important;
+        min-height: 133px !important;
+
+        max-width: 133px !important;
+        max-height: 133px !important;
     }
 
 
-    .avatar {
-        width:
-            128px;
-
-        height:
-            128px;
-    }
-
+    /* PROFILE */
 
     .profile {
-        padding-top:
-            86px;
+        padding-top: 88px !important;
     }
 
+    .profile h1 {
+        font-size: 28px;
+    }
+
+
+    /* CTA */
 
     .primary-btn {
-        font-size:
-            16px;
+        width: 100%;
 
-        padding:
-            12px 18px;
+        max-width: 100%;
     }
 
+
+    /* INTRO */
 
     .intro {
-        font-size:
-            15px;
+        font-size: 15px;
     }
 
+
+    /* NETWORK */
+
+    .networks {
+        gap: 7px;
+    }
 
     .network {
-        min-height:
-            56px;
+        min-height: 52px;
 
-        font-size:
-            14px;
+        font-size: 13px;
     }
 
+
+    /* ACTIONS */
 
     .actions {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
-
 
     .action {
-        min-height:
-            62px;
+        min-height: 64px;
+
+        padding:
+            10px 14px;
     }
 
+    .action .icon {
+        flex-basis: 46px;
+
+        width: 46px;
+
+        height: 46px;
+    }
+
+    .action-text b {
+        font-size: 15px;
+    }
+
+    .action-text small {
+        font-size: 12.5px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+:focus-visible {
+    outline:
+        3px solid rgba(8, 102, 223, 0.35);
+
+    outline-offset: 3px;
 }
